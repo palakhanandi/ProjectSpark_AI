@@ -162,7 +162,11 @@ def clear():
             "status": "success"
         }
     )
-  app=app
 
 
+# This exposes the Flask application for Vercel
+application = app
 
+
+if __name__ == "__main__":
+    app.run(debug=True)
