@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ProjectSpark AI</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="rocket">
+                🚀
+            </div>
+
+            <div>
+
+                <h2>ProjectSpark AI</h2>
+
+                <span>Engineering Mentor</span>
+
+            </div>
+
+        </div>
+
+        <button id="new-chat" onclick="clearChat()">
+
+            <i class="fa-solid fa-plus"></i>
+
+            New Chat
+
+        </button>
+
+        <div class="menu-title">
+
+            Quick Prompts
+
+        </div>
+
+        <div class="prompt" onclick="sendSuggestion(this)">
+            💡 Suggest an Azure AI project
+        </div>
+
+        <div class="prompt" onclick="sendSuggestion(this)">
+            🤖 Final year ML project ideas
+        </div>
+
+        <div class="prompt" onclick="sendSuggestion(this)">
+            📊 PPT for my project
+        </div>
+
+        <div class="prompt" onclick="sendSuggestion(this)">
+            ☁ Recommend Azure Services
+        </div>
+
+        <div class="prompt" onclick="sendSuggestion(this)">
+            🧠 Explain CNN simply
+        </div>
+
+        <div class="bottom">
+
+            <p>Powered by Azure OpenAI</p>
+
+        </div>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="main">
+
+        <header>
+
+            <h1>
+
+                🚀 ProjectSpark AI
+
+            </h1>
+
+            <p>
+
+                Transform Your Ideas into Real Projects
+
+            </p>
+
+        </header>
+
+        <!-- Chat -->
+
+        <div id="chat-box" class="chat-box">
+
+            <div class="bot">
+
+                <div class="icon">
+
+                    🤖
+
+                </div>
+
+                <div class="bubble">
+
+                    <h2>Welcome 👋</h2>
+
+                    <p>
+
+                        I'm <strong>ProjectSpark AI</strong>.
+
+                    </p>
+
+                    <p>
+
+                        I can help you with:
+
+                    </p>
+
+                    <div class="cards">
+
+                        <div class="card">💡 Project Ideas</div>
+
+                        <div class="card">🤖 AI / ML</div>
+
+                        <div class="card">☁ Azure</div>
+
+                        <div class="card">📄 Documentation</div>
+
+                        <div class="card">📊 PPT</div>
+
+                        <div class="card">🏆 Hackathons</div>
+
+                    </div>
+
+                    <br>
+
+                    <p>
+
+                        Ask me anything related to Engineering, AI or Azure.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Input -->
+
+        <div class="input-container">
+
+            <button class="circle">
+
+                <i class="fa-solid fa-paperclip"></i>
+
+            </button>
+
+            <input
+
+                id="user-input"
+
+                type="text"
+
+                placeholder="Ask anything about Engineering Projects..."
+
+            >
+
+            <button class="circle">
+
+                <i class="fa-solid fa-microphone"></i>
+
+            </button>
+
+            <button id="send-btn" onclick="sendMessage()">
+
+                <i class="fa-solid fa-paper-plane"></i>
+
+            </button>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
